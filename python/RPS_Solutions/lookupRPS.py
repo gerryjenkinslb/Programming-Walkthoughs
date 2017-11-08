@@ -25,7 +25,7 @@ while True: # infinite loop till break
     if user == 'q':
         break
 
-    comp = random.choice( 'rps')
+    comp = random.choice( 'rps') # pick singe char
 
     print('Computer picked: ', full_names[comp])
     print('you', rules[user + comp], 'against the computer')

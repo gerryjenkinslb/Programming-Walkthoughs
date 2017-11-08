@@ -2,37 +2,36 @@
 # email: gerry.jenkins@gmail.com
 # program: rock paper scissors
 
-# version using basic program structure
+# version using basic program after refactors
+# also using python  s.format() template function
+# use boolean expression in main if
 
 import random
 
-prompt = "Enter your choice:\nR or r for rock\nP or p for paper\nS or s for scissors\nQ or q to quit\n"
+prompt = 'Enter your choice:\nR or r for rock\nP or p for paper\nS or s for scissors\nQ or q to quit\n'
+out_tempate = 'you {} against the computer'
 
 while True: # infinite loop till break
     user = input(prompt).lower() # lower case users input
-
     if user == 'q':
         break
 
-    win = "you win against the comptuer"
-    lose = "you lose against the comptuer"
-    result = lose # default if not won
+    result = 'lose' # default if not won
 
-    comp = random.choice( ["rock", "paper", "scissors"] )
-    print( "Computer picked:", comp)
+    comp = random.choice( ['rock', 'paper', 'scissors'] )
+    print( 'Computer picked:', comp)
 
-    if comp[0] == user: # tie
-        result = "you tie against the computer"
-    else: # win or lose if structure
-        if user == 'r':
-            if comp == 'scissors':
+    if comp[0] == user: # moved tie out of main if
+        result = 'tie'
+    else: # test if win
+        if user == 'r' and comp == 'scissors':
+                result = 'win'
+        if user == 'p' and comp == 'rock':
                 result = win
-        if user == 'p':
-            if comp == 'rock':
+        if user == 's' comp == 'paper':
                 result = win
-        if user == 's':
-            if comp == 'paper':
-                result = win
-    print(result)
+#    NOTE: above three if's can become one boolean expressions, just or the if expressions together
+ 
+    print(out_template.fomrat(result))
 
 
