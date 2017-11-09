@@ -9,7 +9,7 @@
 import random
 
 prompt = 'Enter your choice:\nR or r for rock\nP or p for paper\nS or s for scissors\nQ or q to quit\n'
-out_tempate = 'you {} against the computer'
+out_template = 'you {} against the computer'
 
 while True: # infinite loop till break
     user = input(prompt).lower() # lower case users input
@@ -27,11 +27,11 @@ while True: # infinite loop till break
         if user == 'r' and comp == 'scissors':
                 result = 'win'
         if user == 'p' and comp == 'rock':
-                result = win
-        if user == 's' comp == 'paper':
-                result = win
+                result = 'win'
+        if user == 's' and comp == 'paper':
+                result = 'win'
 #    NOTE: above three if's can become one boolean expressions, just or the if expressions together
  
-    print(out_template.fomrat(result))
+    print(out_template.format(result))
 
 
