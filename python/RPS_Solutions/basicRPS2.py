@@ -1,5 +1,5 @@
 # name: Gerry Jenkins
-# email: gerry.jenkins@gmail.com
+# youtube channel: https://youtube.com/gjenkinslbcc
 # program: rock paper scissors
 
 # version using basic program after refactors
